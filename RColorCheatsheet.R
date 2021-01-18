@@ -1,5 +1,6 @@
 library(ggplot2); theme_set(theme_void())
 library(shadowtext)
+library(svglite)
 
 # Create a data.frame of all distinct color names in R
 clr = data.frame(colorName = colors(distinct = TRUE))
@@ -18,7 +19,7 @@ clr = cbind(clr, expand.grid(y = -seq_len(40), x = seq_len(10)))
 sheet = ggplot(clr, aes(x = x, y = y, fill = colorName, label = colorName)) +
   geom_tile(color = "black") +
   scale_fill_identity() +
-  geom_shadowtext(aes(x = x - .45), size = 1.75, fontface = "bold", hjust = 0) +
+  geom_shadowtext(aes(x = x - .45), size = 1.9, fontface = "bold", hjust = 0) +
   ggtitle("# The Built-in Color Names of R") +
   theme(legend.position = "", 
     plot.margin = unit(c(0, -1, -.5, -1), "lines"),
@@ -26,25 +27,16 @@ sheet = ggplot(clr, aes(x = x, y = y, fill = colorName, label = colorName)) +
       family = "mono", face = "bold"))
 
 # Create png pdf and svg versions of the plot
-png("./output/outlined/R-Colors-Cheatsheet.png", width = 1920, height = 1080, 
-  res = 200)
-plot(sheet)
-dev.off()
-
-pdfscale = 200
-pdf("./output/outlined/R-Colors-Cheatsheet.pdf", width = 1920/pdfscale, 
-  height = 1080/pdfscale)
-plot(sheet)
-dev.off()
-
-svg("./output/outlined/R-Colors-Cheatsheet.svg", width = 1920/pdfscale, 
-  height = 1080/pdfscale)
-plot(sheet)
-dev.off()
+ggsave("./output/outlined/R-Colors-Cheatsheet.png", sheet, width = 9.6, 
+  height = 5.4, dpi = 400)
+ggsave("./output/outlined/R-Colors-Cheatsheet.pdf", sheet, width = 9.6, 
+  height = 5.4)
+ggsave("./output/outlined/R-Colors-Cheatsheet.svg", sheet, width = 9.6, 
+  height = 5.4)
 
 
 #==============================================================================#
-# An alternative version with bw, instead of outlined text                     #
+# Alternative version with black and white text labels                         #
 #==============================================================================#
 
 # Compute the euclidean RGB distance to black (0,0,0) and define a cutoff 
@@ -67,17 +59,9 @@ sheet2 = ggplot(clr, aes(x = x, y = y, fill = colorName, label = colorName)) +
       family = "mono", face = "bold"))
 
 # Create png pdf and svg versions of the plot
-png("./output/bw_text/R-Colors-Cheatsheet.png", width = 1920, height = 1080, 
-  res = 200)
-plot(sheet2)
-dev.off()
-
-pdf("./output/bw_text/R-Colors-Cheatsheet.pdf", width = 1920/pdfscale, 
-  height = 1080/pdfscale)
-plot(sheet2)
-dev.off()
-
-svg("./output/bw_text/R-Colors-Cheatsheet.svg", width = 1920/pdfscale, 
-  height = 1080/pdfscale)
-plot(sheet2)
-dev.off()
+ggsave("./output/bw_text/R-Colors-Cheatsheet.png", sheet2, width = 9.6, 
+  height = 5.4, dpi = 400)
+ggsave("./output/bw_text/R-Colors-Cheatsheet.pdf", sheet2, width = 9.6, 
+  height = 5.4)
+ggsave("./output/bw_text/R-Colors-Cheatsheet.svg", sheet2, width = 9.6, 
+  height = 5.4)

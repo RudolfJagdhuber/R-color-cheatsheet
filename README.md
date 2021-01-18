@@ -7,11 +7,14 @@ formats: `png`, `pdf` and `svg`.
 The first version of the cheatsheet uses outlined labels for a consistent style
 with readability.
 
-![outlined](./output/outlined/R-Colors-Cheatsheet.svg)
+![outlined](./output/outlined/R-Colors-Cheatsheet.png)
+
 
 ## Cheatsheet with Black and White Labels
 An alternative version of the cheatsheet uses black and white labels depending
 on the lightness of the color it is written onto. The style is less consistent
 but in my opinion easier to read.
 
-![bw](./output/bw_text/R-Colors-Cheatsheet.svg)
+![bw](./output/bw_text/R-Colors-Cheatsheet.png)
+
+
