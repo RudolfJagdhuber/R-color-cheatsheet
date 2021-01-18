@@ -20,7 +20,7 @@ sheet = ggplot(clr, aes(x = x, y = y, fill = colorName, label = colorName)) +
   geom_tile(color = "black") +
   scale_fill_identity() +
   geom_shadowtext(aes(x = x - .45), size = 1.9, fontface = "bold", hjust = 0) +
-  ggtitle("# The Built-in Color Names of R") +
+  ggtitle("# All Built-in Color Names of R") +
   theme(legend.position = "", 
     plot.margin = unit(c(0, -1, -.5, -1), "lines"),
     plot.title = element_text(size = 20, hjust = 0.1, vjust = -2, 
@@ -52,7 +52,7 @@ sheet2 = ggplot(clr, aes(x = x, y = y, fill = colorName, label = colorName)) +
   geom_text(aes(x = x - 0.45, color = textColor), size = 2, fontface = "bold", 
     hjust = 0) +
   scale_color_identity() +
-  ggtitle("# The Built-in Color Names of R") +
+  ggtitle("# All Built-in Color Names of R") +
   theme(legend.position = "", 
     plot.margin = unit(c(0, -1, -.5, -1), "lines"),
     plot.title = element_text(size = 20, hjust = 0.1, vjust = -2, 
