@@ -1,19 +1,34 @@
-# R-color-cheatsheet
-A simple script, which creates a cheatsheet of all built-in color names that R 
-knows about. The resulting files can be found in the `./output` folder in three
-formats: `png`, `pdf` and `svg`.
+# A Cheatsheet for Standard Colors in R
+Finding nice colors to optimize your R plots is a standard task for every data
+scientist. I personally got tired of googling `"R color cheatsheet"` and settling 
+with the incomplete or low quality versions I found there, so I made my own to
+fit all of my needs. 
+
+It is available in three high quality formats: `png` (600dpi), `svg` and `pdf`.
+
+I created it with some data-wrangling of `colors()` and `ggplot`. Each tile
+shows the name and hex value of the color. Colors are sorted by hue. The text
+is written in either white or black depending on the brightness of the color.
+I used its RGB distance to black and defined a cutoff for that.
+
+There are two versions of the cheatsheet:
+
+## Cheatsheet with Names and Hex Values
+This main version includes names and hex values of each color on the left side of
+each tile.
+
+![standardVersion](./output/standard/R-Colors-Cheatsheet.svg)
 
 
-## Cheatsheet with Outlined Labels
-The first version of the cheatsheet uses outlined labels for a consistent style
-with readability.
+## Cheatsheet with large Labels
+As the fontsize of each label was rather small, an alternative version of the 
+cheatsheet includes centered labels only, but in larger font.
 
-![outlinedVersion](./output/outlined/R-Colors-Cheatsheet.png)
+![largeVersion](./output/large/R-Colors-Cheatsheet-large.svg)
 
 
-## Cheatsheet with Black and White Labels
-An alternative version of the cheatsheet uses black and white labels depending
-on the lightness of the color it is written onto. The style is less consistent
-but in my opinion easier to read.
+## Digitally own these Cheatsheets
+If you are interested in NFTs or digital arts, you might want to look over to 
+my collections at [OpenSea](https://opensea.io/DataVisions), where you can buy 
+these or other cheatsheets.
 
-![bwVersion](./output/bw_text/R-Colors-Cheatsheet.png)
