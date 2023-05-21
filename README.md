@@ -25,10 +25,3 @@ As the fontsize of each label was rather small, an alternative version of the
 cheatsheet includes centered labels only, but in larger font.
 
 ![largeVersion](./output/large/R-Colors-Cheatsheet-large.svg)
-
-
-## Digitally own these Cheatsheets
-If you are interested in NFTs or digital arts, you might want to look over to 
-my collections at [OpenSea](https://opensea.io/DataVisions), where you can buy 
-these or other cheatsheets.
-
